@@ -13,7 +13,7 @@ describe('Foo.vue', () => {
   });
 
   it('can find child', () => {
-    expect(wrapper.find({ ref: "child" }).isVueInstance()).to.be.true; // fails
+    expect(wrapper.find({ ref: "child" }).isVueInstance()).to.be.true; // passes
   });
 
   it('can find defaultSlot', () => {
