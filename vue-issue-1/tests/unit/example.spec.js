@@ -8,6 +8,13 @@ describe('Foo.vue', () => {
     wrapper = mount(Foo, {});
   });
 
+  it("definitely has refs", () => {
+    expect(wrapper.vm.$refs.root).to.exist;
+    expect(wrapper.vm.$refs.child).to.exist;
+    expect(wrapper.vm.$refs.defaultSlot).to.exist;
+    expect(wrapper.vm.$refs.namedSlot).to.exist;
+  });
+
   it('can find root', () => {
     expect(wrapper.find({ ref: "root" }).isVueInstance()).to.be.true; // fails
   });
